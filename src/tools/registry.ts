@@ -1,5 +1,7 @@
 import type { ComponentType } from 'react';
 import Acl from './Acl';
+import Checklist from './Checklist';
+import Commands from './Commands';
 import ConfigGen from './ConfigGen';
 import Convert from './Convert';
 import Ipv4Calc from './Ipv4Calc';
@@ -18,7 +20,7 @@ export interface ToolDef {
   path: string;
   title: string;
   summary: string;
-  group: 'Addressing' | 'Planning' | 'Layer 2' | 'Performance' | 'Reference & config';
+  group: 'Addressing' | 'Planning' | 'Layer 2' | 'Performance' | 'Troubleshooting' | 'Reference & config';
   component: ComponentType;
 }
 
@@ -33,6 +35,8 @@ export const TOOLS: ToolDef[] = [
   { path: '/mac', title: 'MAC address tool', summary: 'Format conversion and OUI vendor lookup', group: 'Layer 2', component: Mac },
   { path: '/mtu', title: 'MTU & MSS calculator', summary: 'Tunnel overhead for GRE, IPsec, VXLAN, WireGuard and more', group: 'Performance', component: Mtu },
   { path: '/throughput', title: 'Bandwidth & TCP', summary: 'Transfer time, BDP, window and loss limits', group: 'Performance', component: Throughput },
+  { path: '/checklist', title: 'Connectivity checklist', summary: 'Step-by-step checks from the link up to the application', group: 'Troubleshooting', component: Checklist },
+  { path: '/commands', title: 'Troubleshooting commands', summary: 'Windows and Debian network commands, side by side', group: 'Troubleshooting', component: Commands },
   { path: '/ports', title: 'Port reference', summary: 'Searchable well-known ports and IP protocol numbers', group: 'Reference & config', component: Ports },
   { path: '/config', title: 'Config generator', summary: 'VLAN, port and route snippets for Cisco, Junos, RouterOS', group: 'Reference & config', component: ConfigGen },
 ];

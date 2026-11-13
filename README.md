@@ -16,6 +16,8 @@ A toolkit for everyday network tasks. It runs entirely in the browser: nothing y
 | **MAC address tool** | Bulk conversion between notations, IEEE OUI vendor lookup from bundled data, multicast and locally-administered flags, and the EUI-64 link-local address. |
 | **MTU & MSS calculator** | Stack PPPoE, MPLS, GRE, GRETAP, IP-in-IP, VXLAN, Geneve, WireGuard, IPsec ESP (exact padding per cipher, with optional NAT-T) or a custom overhead. Gives the inner MTU, IPv4/IPv6 MSS, ping test commands and MSS-clamp configuration. |
 | **Bandwidth & TCP** | Transfer time and the rate needed to hit a deadline, bandwidth-delay product, window-scale factor, window-limited and loss-limited (Mathis) throughput, and a rate unit converter. |
+| **Connectivity checklist** | Seven bottom-up checks (link, IP address, gateway, internet, DNS, service port, MTU). Each one says what to look for and gives the commands for Windows and Debian. |
+| **Troubleshooting commands** | About 150 Windows (cmd/PowerShell) and Debian commands in 12 topics, side by side and searchable. Your host, port, gateway and interface names are filled into every command. Commands are marked when they need admin/root, are PowerShell-only, or need an extra Debian package. |
 | **Port reference** | Searchable list of well-known ports and IP protocol numbers. |
 | **Config generator** | VLANs and their gateway interfaces, access and trunk ports, and static routes, generated for Cisco IOS, Junos (ELS) or RouterOS v7 from short line-based input. |
 
@@ -44,7 +46,7 @@ The build is a static site with relative asset paths and hash routing. You can h
 ```
 src/
   lib/          Pure logic, no React: ip, prefix, info, vlsm, mac, mtu, throughput, acl, configgen, convert (+ tests)
-  data/         Port and protocol reference data
+  data/         Port/protocol reference and troubleshooting command data
   tools/        One React component per tool, plus registry.ts (navigation)
   components/   Shared UI pieces
 ```

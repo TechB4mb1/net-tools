@@ -787,3 +787,261 @@ ul.plain li {
   color: var(--muted);
   font-size: 0.88rem;
 }
+
+/* ---------- Troubleshooting ---------- */
+
+.field-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--muted);
+}
+
+.segmented {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  align-self: flex-start;
+}
+
+.segmented button {
+  border: none;
+  border-radius: 0;
+  background: var(--surface);
+  padding: 7px 14px;
+}
+
+.segmented button + button {
+  border-left: 1px solid var(--border);
+}
+
+.segmented button.on {
+  background: var(--accent);
+  color: #fff;
+}
+
+.row > .field:has(.segmented) {
+  flex: 0 0 auto;
+}
+
+.placeholder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0 12px;
+}
+
+.topic-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.chip {
+  font-size: 0.82rem;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: var(--surface-2);
+}
+
+.topic {
+  scroll-margin-top: 16px;
+}
+
+.task + .task {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.task h3 {
+  font-size: 0.95rem;
+  margin: 0 0 8px;
+}
+
+.task-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+}
+
+.task-cols.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .task-cols.two {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.os-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+
+.os-windows {
+  color: var(--accent-text);
+}
+
+.os-debian {
+  color: #c7053d;
+}
+
+@media (prefers-color-scheme: dark) {
+  .os-debian {
+    color: #ff6b8e;
+  }
+}
+
+.cmd-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cmd-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: var(--code-bg);
+  border-radius: 7px;
+  padding: 7px 8px 7px 12px;
+}
+
+.cmd-text {
+  flex: 1;
+  min-width: 0;
+  background: none;
+  padding: 0;
+  color: var(--code-text);
+  font-size: 0.86rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.cmd-line button.copy {
+  color: var(--code-text);
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.cmd-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: baseline;
+  margin-top: 4px;
+  font-size: 0.82rem;
+}
+
+.cmd-note {
+  color: var(--muted);
+}
+
+.tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: 99px;
+  white-space: nowrap;
+  background: var(--surface-2);
+  color: var(--muted);
+}
+
+.tag-ps {
+  background: var(--accent-soft);
+  color: var(--accent-text);
+}
+
+.tag-admin {
+  background: var(--warn-soft);
+  color: var(--warn);
+}
+
+.tag-pkg {
+  font-family: var(--mono);
+  font-weight: 500;
+}
+
+.steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.step-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.step-head h2 {
+  font-size: 1.1rem;
+  flex: 1;
+}
+
+.step-num {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-text);
+  font-weight: 700;
+}
+
+.step-done .step-num {
+  background: var(--accent);
+  color: #fff;
+}
+
+.step-done {
+  border-color: var(--accent);
+}
+
+.step-check {
+  margin: 0;
+}
+
+.step-why {
+  margin: 0 0 10px;
+}
+
+.step h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: 12px 0 6px;
+}
+
+.look-for {
+  margin: 0 0 16px;
+  padding-left: 1.2em;
+}
+
+.look-for li {
+  margin-bottom: 3px;
+}
+
+.step .task {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.step-link {
+  margin: 14px 0 0;
+}
