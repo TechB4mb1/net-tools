@@ -35,6 +35,10 @@ npm run preview    # serve the production build
 
 The build is a static site with relative asset paths and hash routing. You can host `dist/` anywhere: GitHub Pages, S3, nginx, or an internal web server.
 
+## Deployment
+
+`.github/workflows/deploy.yml` tests, builds and publishes the site to GitHub Pages on every push to `main`. You can also run it by hand from the Actions tab. One-time setup: in **Settings → Pages**, set **Source** to **GitHub Actions**.
+
 ## Layout
 
 ```
