@@ -1019,7 +1019,7 @@ ul.plain li {
   margin: 0 0 10px;
 }
 
-.step h3 {
+.step h3.step-label {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -1044,4 +1044,31 @@ ul.plain li {
 
 .step-link {
   margin: 14px 0 0;
+}
+
+.step-collapsed .step-head {
+  margin-bottom: 0;
+}
+
+.step-toggle {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.step-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.step-chevron {
+  color: var(--muted);
+  font-size: 0.85em;
+}
+
+.step-collapsed h2 {
+  color: var(--muted);
 }
